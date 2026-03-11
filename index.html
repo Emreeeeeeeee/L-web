@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>eLogo | Dijital Dönüşüm Ortağınız - e-Fatura, e-Arşiv, e-Defter</title>
+  <meta name="description" content="eLogo ile e-Fatura, e-Arşiv, e-Defter ve tüm e-dönüşüm çözümlerini keşfedin. 25+ muhasebe yazılımı ile entegre, Bilişim 500 ödüllü platform.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- ========== STICKY SIDE CTA ========== -->
+  <a href="#hero" class="sticky-side-cta" aria-label="Teklif Alın">
+    <span>Teklif alın</span>
+  </a>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="container navbar-inner">
+      <a href="#" class="navbar-logo">
+        <svg width="120" height="36" viewBox="0 0 120 36" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
+          <rect x="0" y="4" width="28" height="28" rx="6" fill="#00BCD4"/>
+          <text x="6" y="25" font-family="Inter" font-weight="800" font-size="18" fill="white">e</text>
+          <text x="34" y="26" font-family="Inter" font-weight="700" font-size="22" fill="currentColor">Logo</text>
+        </svg>
+      </a>
+
+      <div class="navbar-links" id="navLinks">
+        <a href="#products" class="nav-link">Ürünler</a>
+        <a href="#why-digital" class="nav-link">Neden Dijital Dönüşüm</a>
+        <a href="#why-elogo" class="nav-link">Neden eLogo</a>
+        <a href="#faq" class="nav-link">SSS</a>
+      </div>
+
+      <div class="navbar-actions">
+        <a href="tel:02626798099" class="nav-phone">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>0 262 679 80 99</span>
+        </a>
+        <a href="#hero" class="btn btn-primary nav-cta">Teklif Alın</a>
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="Menüyü aç">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu-inner">
+        <a href="#products" class="mobile-link">Ürünler</a>
+        <a href="#why-digital" class="mobile-link">Neden Dijital Dönüşüm</a>
+        <a href="#why-elogo" class="mobile-link">Neden eLogo</a>
+        <a href="#faq" class="mobile-link">SSS</a>
+        <a href="tel:02626798099" class="mobile-link mobile-phone">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          0 262 679 80 99
+        </a>
+        <a href="#hero" class="btn btn-primary mobile-cta">Teklif Alın</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== HERO SECTION ========== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="hero-bg-layer active" data-bg="0"></div>
+      <div class="hero-bg-layer" data-bg="1"></div>
+      <div class="hero-bg-layer" data-bg="2"></div>
+      <div class="hero-bg-layer" data-bg="3"></div>
+      <div class="hero-bg-layer" data-bg="4"></div>
+      <div class="hero-pattern"></div>
+      <div class="grain-overlay"></div>
+      <div class="hero-mesh hero-mesh-1"></div>
+      <div class="hero-mesh hero-mesh-2"></div>
+      <div class="hero-mesh hero-mesh-3"></div>
+    </div>
+
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <!-- Hero Slider -->
+        <div class="hero-slider" id="heroSlider">
+          <div class="hero-slides">
+            <div class="hero-slide active">
+              <div class="hero-badge"><span class="badge-dot"></span>Türkiye'nin 1 Numaralı e-Dönüşüm Platformu</div>
+              <h1 class="hero-title">e-Fatura ile İş Süreçlerinizi <span class="text-gradient">Dijitalleştirin</span></h1>
+              <p class="hero-subtitle">Faturalarınızı dijital ortama taşıyarak iş süreçlerinizi hızlandırın, maliyetlerinizi düşürün, yasal uyumluluğunuzu sağlayın. <strong>25+ muhasebe yazılımı</strong> ile sorunsuz entegrasyon.</p>
+            </div>
+            <div class="hero-slide">
+              <div class="hero-badge"><span class="badge-dot"></span>GİB Onaylı e-Arşiv Çözümü</div>
+              <h1 class="hero-title">e-Arşiv Fatura ile <span class="text-gradient">Kolayca Kesin</span></h1>
+              <p class="hero-subtitle">e-Fatura mükellefi olmayan müşterilerinize ve nihai tüketicilere kestiğiniz faturaları <strong>dijital ortamda</strong> düzenleyin.</p>
+            </div>
+            <div class="hero-slide">
+              <div class="hero-badge"><span class="badge-dot"></span>Yasal Uyumlu e-Defter</div>
+              <h1 class="hero-title">e-Defter ile <span class="text-gradient">Güvenli Saklayın</span></h1>
+              <p class="hero-subtitle">Yevmiye defteri ve defter-i kebiri elektronik ortamda oluşturun, onaylayın ve <strong>GİB mevzuatına uygun</strong> saklayın.</p>
+            </div>
+            <div class="hero-slide">
+              <div class="hero-badge"><span class="badge-dot"></span>Dijital Sevkiyat Yönetimi</div>
+              <h1 class="hero-title">e-İrsaliye ile <span class="text-gradient">Hızlandırın</span></h1>
+              <p class="hero-subtitle">Sevk irsaliyelerinizi dijital ortamda oluşturun, <strong>sevkiyat süreçlerinizi</strong> hızlandırın ve maliyetlerinizi düşürün.</p>
+            </div>
+            <div class="hero-slide">
+              <div class="hero-badge"><span class="badge-dot"></span>100.000+ Mutlu Müşteri</div>
+              <h1 class="hero-title">Dijital Dönüşümde <span class="text-gradient">Lider Partner</span></h1>
+              <p class="hero-subtitle">Tüm e-dönüşüm çözümlerini tek platformda sunan eLogo ile <strong>işletmenizi geleceğe</strong> taşıyın.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-stats-editorial">
+          <div class="hero-stat-big">
+            <span class="stat-number" data-count="100000">0</span>
+            <span class="stat-label">Mutlu Müşteri</span>
+          </div>
+          <div class="hero-stat-big">
+            <span class="stat-number" data-count="8">0</span>
+            <span class="stat-label">Yıl Üst Üste Ödül</span>
+          </div>
+          <div class="hero-stat-big">
+            <span class="stat-number" data-count="99.9" data-prefix="%">0</span>
+            <span class="stat-label">Çalışma Süresi</span>
+          </div>
+        </div>
+
+        <div class="hero-awards">
+          <div class="award-chip">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+            Bilişim 500 - 8 Yıl 1.
+          </div>
+          <div class="award-chip">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            CX Awards - 3 Yıl Üst Üste
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-form-wrapper">
+        <div class="hero-form-glass">
+          <div class="hero-form-card">
+            <div class="form-header">
+              <div class="form-header-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div>
+                <h2 class="form-title">Ücretsiz Teklif Alın</h2>
+                <p class="form-subtitle">Sizi hemen arayalım</p>
+              </div>
+            </div>
+
+            <form class="hero-form" id="heroForm" novalidate>
+              <div class="form-group">
+                <div class="input-wrapper">
+                  <svg class="input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                  <input type="text" id="fullName" class="form-input" placeholder=" " required>
+                  <label for="fullName" class="form-label">Ad Soyad</label>
+                </div>
+                <span class="form-error" id="fullNameError"></span>
+              </div>
+
+              <div class="form-group">
+                <div class="input-wrapper">
+                  <svg class="input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  <input type="tel" id="phone" class="form-input" placeholder=" " required>
+                  <label for="phone" class="form-label">Telefon Numarası</label>
+                </div>
+                <span class="form-error" id="phoneError"></span>
+              </div>
+
+              <div class="form-group">
+                <div class="input-wrapper">
+                  <svg class="input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg>
+                  <input type="text" id="companyName" class="form-input" placeholder=" " required>
+                  <label for="companyName" class="form-label">Firma Adı</label>
+                </div>
+                <span class="form-error" id="companyNameError"></span>
+              </div>
+
+              <div class="form-checkbox">
+                <input type="checkbox" id="kvkk" required>
+                <label for="kvkk"><a href="#" target="_blank">KVKK Aydınlatma Metni</a>'ni okudum, onaylıyorum.</label>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-lg btn-submit">
+                <span class="btn-text">Hemen Arayın</span>
+                <span class="btn-loader" style="display:none;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+                </span>
+              </button>
+
+              <p class="form-privacy">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                Bilgileriniz gizli tutulacaktır
+              </p>
+            </form>
+
+            <!-- Success State -->
+            <div class="form-success" id="formSuccess" style="display:none;">
+              <div class="success-icon">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              </div>
+              <h3>Teşekkürler!</h3>
+              <p>En kısa sürede sizi arayacağız.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-slider-dots" id="heroSliderDots">
+      <button class="hero-dot active" data-slide="0"></button>
+      <button class="hero-dot" data-slide="1"></button>
+      <button class="hero-dot" data-slide="2"></button>
+      <button class="hero-dot" data-slide="3"></button>
+      <button class="hero-dot" data-slide="4"></button>
+    </div>
+
+    <div class="hero-scroll-indicator">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+    </div>
+  </section>
+
+  <!-- ========== PRODUCTS - BENTO GRID ========== -->
+  <section class="section products-section" id="products">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title-red">e-Dönüşüm Çözümleri</h2>
+        <div class="red-line center"></div>
+      </div>
+
+      <div class="bento-grid">
+        <!-- Featured: e-Fatura (2 col wide) -->
+        <div class="bento-card bento-card--featured animate-on-scroll" data-tilt style="--delay: 0">
+          <div class="bento-card-gradient" style="--bg: var(--gradient-bento-1)"></div>
+          <div class="bento-card-content">
+            <div class="bento-icon">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            </div>
+            <h3 class="bento-title">e-Fatura</h3>
+            <p class="bento-desc">e-Fatura ile faturalarınızı dijital ortama taşıyarak iş süreçlerinizi ve ticaretinizi hızlandırarak şirketinizin verimliliğini artırın.</p>
+            <a href="#" class="bento-link">Devamını oku <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          </div>
+        </div>
+
+        <!-- Tall: e-Arşiv (2 row tall) -->
+        <div class="bento-card bento-card--tall animate-on-scroll" data-tilt style="--delay: 1">
+          <div class="bento-card-gradient" style="--bg: var(--gradient-bento-2)"></div>
+          <div class="bento-card-content">
+            <div class="bento-icon">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 8v13H3V8"/><path d="M1 3h22v5H1z"/><path d="M10 12h4"/></svg>
+            </div>
+            <h3 class="bento-title">e-Arşiv</h3>
+            <p class="bento-desc">e-Fatura mükellefi olmayan müşterilerinize ve nihai tüketicilere kestiğiniz faturalarınızı da dijital ortamda düzenleyin.</p>
+            <a href="#" class="bento-link">Devamını oku <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          </div>
+        </div>
+
+        <!-- Small: e-İrsaliye -->
+        <div class="bento-card bento-card--small animate-on-scroll" data-tilt style="--delay: 2">
+          <div class="bento-card-gradient" style="--bg: var(--gradient-bento-3)"></div>
+          <div class="bento-card-content">
+            <div class="bento-icon">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 3v5a2 2 0 0 1-2 2h-1"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            </div>
+            <h3 class="bento-title">e-İrsaliye</h3>
+            <p class="bento-desc">Sevk irsaliyelerinizi dijital ortamda oluşturun, sevkiyat süreçlerinizi hızlandırın.</p>
+            <a href="#" class="bento-link">Devamını oku <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          </div>
+        </div>
+
+        <!-- Small: e-Adisyon -->
+        <div class="bento-card bento-card--small animate-on-scroll" data-tilt style="--delay: 3">
+          <div class="bento-card-gradient" style="--bg: var(--gradient-bento-4)"></div>
+          <div class="bento-card-content">
+            <div class="bento-icon">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+            </div>
+            <h3 class="bento-title">e-Adisyon</h3>
+            <p class="bento-desc">Adisyonlarınızı eLogo avantajlarıyla oluşturun, iş süreçlerinizi hızlandırın!</p>
+            <a href="#" class="bento-link">Devamını oku <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Promo Banner -->
+      <div class="promo-banner-editorial animate-on-scroll" style="--delay: 4">
+        <div class="promo-banner-inner">
+          <div class="promo-banner-text">
+            <h3>GİB e-Arşiv Faturalarınızı eLogo avantajlarıyla oluşturun!</h3>
+            <p>eLogo mobil uygulaması ile GİB e-Arşiv Fatura'larınızı dilediğiniz yerden dilediğiniz zaman oluşturun.</p>
+          </div>
+          <a href="#hero" class="btn btn-primary btn-lg">
+            Hemen İncele
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== NEDEN DİJİTAL DÖNÜŞÜM? — Editorial Split ========== -->
+  <section class="section why-digital-section" id="why-digital">
+    <div class="container">
+      <div class="editorial-split">
+        <div class="editorial-text" data-scroll-reveal>
+          <h2 class="editorial-heading">
+            <span class="reveal-line">Neden dijital</span>
+            <span class="reveal-line">dönüşüm?</span>
+          </h2>
+          <div class="red-line"></div>
+          <p class="editorial-desc animate-on-scroll">Dijital dönüşüm, maliyet ve zaman tasarrufu sağlayarak işletmelerin verimliliğini arttırır, iş süreçlerini hızlandırır ve daha güvenli hale getirir. Dijital dönüşüm, çevre dostu çözümler sunar.</p>
+        </div>
+        <div class="editorial-video animate-on-scroll" style="--delay: 1">
+          <div class="video-placeholder">
+            <div class="video-play-btn">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            </div>
+            <div class="video-logo">
+              <span class="video-logo-e">e</span><span class="video-logo-text">Logo</span>
+            </div>
+            <p class="video-tagline">Türkiye'nin e'si</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== DİJİTAL DÖNÜŞÜM HAKKINDA — Horizontal Scroll ========== -->
+  <section class="section about-digital-section" id="about-digital">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title-red">Dijital dönüşüm hakkında</h2>
+        <div class="red-line center"></div>
+        <p class="section-subtitle">Finansal süreçlerinizi kolaylaştıran, masraflarınızı azaltan, zaman kazandıran ve yeni çağa ayak uydurmanızı sağlayan eLogo'nun dijital dönüşüm çözümleriyle tanışın.</p>
+      </div>
+
+      <!-- Category Pills -->
+      <div class="category-pills">
+        <button class="pill active" data-category="e-donusum">e-Dönüşüm</button>
+        <button class="pill" data-category="finansal">Finansal Servisler</button>
+        <button class="pill" data-category="tamamlayici">Tamamlayıcı Servisler</button>
+      </div>
+
+      <!-- Horizontal Scroll Strip with Arrows -->
+      <div class="hscroll-wrapper">
+        <button class="hscroll-arrow hscroll-arrow--prev" id="hscrollPrev" aria-label="Önceki">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <div class="hscroll-strip" id="hscrollStrip">
+          <div class="hscroll-track">
+          <div class="hscroll-card active" data-category="e-donusum">
+            <div class="hscroll-card-img" style="--bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%)">
+              <span class="hscroll-label">e-Fatura</span>
+            </div>
+          </div>
+          <div class="hscroll-card" data-category="e-donusum">
+            <div class="hscroll-card-img" style="--bg: linear-gradient(135deg, #f093fb 0%, #f5576c 100%)">
+              <span class="hscroll-label">e-Arşiv</span>
+            </div>
+          </div>
+          <div class="hscroll-card" data-category="e-donusum">
+            <div class="hscroll-card-img" style="--bg: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)">
+              <span class="hscroll-label">e-Defter</span>
+            </div>
+          </div>
+          <div class="hscroll-card" data-category="e-donusum">
+            <div class="hscroll-card-img" style="--bg: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)">
+              <span class="hscroll-label">e-İrsaliye</span>
+            </div>
+          </div>
+          <div class="hscroll-card" data-category="e-donusum">
+            <div class="hscroll-card-img" style="--bg: linear-gradient(135deg, #fa709a 0%, #fee140 100%)">
+              <span class="hscroll-label">e-Adisyon</span>
+            </div>
+          </div>
+          <div class="hscroll-card" data-category="e-donusum">
+            <div class="hscroll-card-img" style="--bg: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%)">
+              <span class="hscroll-label">e-Dekont</span>
+            </div>
+          </div>
+          <!-- Finansal -->
+          <div class="hscroll-card" data-category="finansal" style="display:none">
+            <div class="hscroll-card-img" style="--bg: linear-gradient(135deg, #0c3483 0%, #a2b6df 100%)">
+              <span class="hscroll-label">Fatura Finansmanı</span>
+            </div>
+          </div>
+          <div class="hscroll-card" data-category="finansal" style="display:none">
+            <div class="hscroll-card-img" style="--bg: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%)">
+              <span class="hscroll-label">e-Tahsilat</span>
+            </div>
+          </div>
+          <div class="hscroll-card" data-category="finansal" style="display:none">
+            <div class="hscroll-card-img" style="--bg: linear-gradient(135deg, #134e5e 0%, #71b280 100%)">
+              <span class="hscroll-label">e-Mutabakat</span>
+            </div>
+          </div>
+          <div class="hscroll-card" data-category="finansal" style="display:none">
+            <div class="hscroll-card-img" style="--bg: linear-gradient(135deg, #373b44 0%, #4286f4 100%)">
+              <span class="hscroll-label">Online Hesap Özeti</span>
+            </div>
+          </div>
+          <!-- Tamamlayıcı -->
+          <div class="hscroll-card" data-category="tamamlayici" style="display:none">
+            <div class="hscroll-card-img" style="--bg: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)">
+              <span class="hscroll-label">e-Defter Saklama</span>
+            </div>
+          </div>
+          <div class="hscroll-card" data-category="tamamlayici" style="display:none">
+            <div class="hscroll-card-img" style="--bg: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%)">
+              <span class="hscroll-label">e-Belge Transfer</span>
+            </div>
+          </div>
+          <div class="hscroll-card" data-category="tamamlayici" style="display:none">
+            <div class="hscroll-card-img" style="--bg: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%)">
+              <span class="hscroll-label">Logo İşbaşı</span>
+            </div>
+          </div>
+        </div>
+        </div>
+        <button class="hscroll-arrow hscroll-arrow--next" id="hscrollNext" aria-label="Sonraki">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+
+      <!-- Product Description -->
+      <div class="product-description animate-on-scroll" id="productDescription">
+        <h3 id="productDescTitle">e-Fatura nedir?</h3>
+        <p id="productDescText">e-Fatura, faturaların internet bağlantısı kullanılarak elektronik ortamda veri format ve standardı Gelir İdaresi Başkanlığı tarafından belirlenen ve elektronik belge biçiminde düzenlenen, VUK gereği bir faturada yer alması gereken bilgilerin içerisinde yer aldığı, satıcı ve alıcı arasında dolaşımını güvenli ve sağlıklı bir biçimde sağlamak amacıyla Gelir İdaresi Başkanlığı tarafından oluşturulan uygulamadır.</p>
+        <a href="#" class="btn btn-primary btn-lg" style="margin-top: 24px">
+          Detaylı İncele
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== NEDEN eLOGO? — Numbered Feature Showcase ========== -->
+  <section class="section why-elogo-section" id="why-elogo">
+    <div class="why-elogo-bg"></div>
+    <div class="why-elogo-mesh-bg"></div>
+    <div class="grain-overlay"></div>
+    <div class="container" style="position: relative; z-index: 1;">
+      <div class="section-header">
+        <h2 class="section-title-white">Neden eLogo ?</h2>
+        <div class="red-line center"></div>
+        <p class="section-subtitle-white">Türkiye'nin e'si eLogo'nun tüm yazılımlarla entegre olabilen altyapısı, uzman kadrosu ve müşteri odaklı hizmet anlayışı ile dijital dönüşüm süreçlerinizi kolaylaştırın.</p>
+      </div>
+
+      <div class="feature-showcase">
+        <div class="feature-item animate-on-scroll" style="--delay: 0">
+          <span class="feature-number text-gradient-number">01</span>
+          <div class="feature-text">
+            <h3>Dijital dönüşümde lider</h3>
+            <p>Sektöründe öncü birçok şirket, dijital dönüşümde özel entegratör olarak eLogo'yu tercih ediyor.</p>
+          </div>
+        </div>
+        <div class="feature-item feature-item--reverse animate-on-scroll" style="--delay: 1">
+          <span class="feature-number text-gradient-number">02</span>
+          <div class="feature-text">
+            <h3>Terzi işi çözümler</h3>
+            <p>Müşterilerinin ihtiyaçlarına yönelik özel çözümler de geliştirerek, rekabette fark yaratmalarını sağlıyor.</p>
+          </div>
+        </div>
+        <div class="feature-item animate-on-scroll" style="--delay: 2">
+          <span class="feature-number text-gradient-number">03</span>
+          <div class="feature-text">
+            <h3>Müşteri odaklılık</h3>
+            <p>Yüz binlerce müşterisinin her türlü sorununa uzman kadro ve yüksek hizmet kalitesiyle hızlıca çözüm sunuyor.</p>
+          </div>
+        </div>
+        <div class="feature-item feature-item--reverse animate-on-scroll" style="--delay: 3">
+          <span class="feature-number text-gradient-number">04</span>
+          <div class="feature-text">
+            <h3>ERP bağımsız mükemmel hizmet</h3>
+            <p>Tüm ERP ve yazılımlarla entegre olabilen altyapısıyla Logo ekosistemi dışında da hizmet sunuyor.</p>
+          </div>
+        </div>
+        <div class="feature-item animate-on-scroll" style="--delay: 4">
+          <span class="feature-number text-gradient-number">05</span>
+          <div class="feature-text">
+            <h3>Yasal güncellemelere hızlı uyum</h3>
+            <p>Yeni ya da değişen yasal mevzuatlara hızla adapte olan altyapısı ile dijital süreçlerinizi Gelir İdaresi Başkanlığı'na uyumlu yürütmenizi sağlıyor.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== BİLİŞİM 500 — Award Spotlight ========== -->
+  <section class="section award-section" id="award">
+    <div class="award-bg-dots"></div>
+    <div class="container">
+      <div class="award-spotlight animate-on-scroll">
+        <div class="award-big-number" data-count="7" id="awardNumber">0</div>
+        <div class="award-celebration" id="awardCelebration"></div>
+        <p class="award-subtitle">Yıl Üst Üste Birincilik</p>
+        <h2 class="award-headline">Türkiye'nin e'si 7. kez yılın birincisi</h2>
+        <div class="red-line center"></div>
+        <p class="award-desc">Bilişim 500 Araştırması'nda bu yıl 7. kez Türkiye Merkezli Üretici Kategorisi'nde Yılın e-Fatura, e-Defter, e-Arşiv Hizmeti Kategori 1'incisi ödülüne hak kazandık. Sizden aldığımız güçle yeni başarılara koşmaya devam edeceğiz.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== BLOG — Overlapping Cards ========== -->
+  <section class="section blog-section" id="blog">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title-red">Dönüşüm hikayelerini bizimle takip edin</h2>
+        <div class="red-line center"></div>
+        <p class="section-subtitle">Şirketinizi dijital dönüşüme entegre edebilmeniz için en uygun çözümler, ihtiyacınız olan ürünler eLogo uzmanlığıyla sizinle.</p>
+      </div>
+
+      <div class="blog-slider-wrapper">
+        <button class="blog-arrow blog-arrow--prev" id="blogPrev" aria-label="Önceki">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <div class="blog-slider" id="blogSlider">
+          <div class="blog-slider-track">
+            <div class="blog-slide">
+              <div class="blog-card-overlap animate-on-scroll" style="--delay: 0">
+                <div class="blog-card-img" style="--bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%)">
+                  <span class="blog-date">20.07.2025</span>
+                </div>
+                <div class="blog-card-body"><h3>Performans değerlendirme ölçeği nedir, çeşitleri nelerdir?</h3></div>
+              </div>
+            </div>
+            <div class="blog-slide">
+              <div class="blog-card-overlap animate-on-scroll" style="--delay: 1">
+                <div class="blog-card-img" style="--bg: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)">
+                  <span class="blog-date">18.07.2025</span>
+                </div>
+                <div class="blog-card-body"><h3>CBAM Raporu nedir?</h3></div>
+              </div>
+            </div>
+            <div class="blog-slide">
+              <div class="blog-card-overlap animate-on-scroll" style="--delay: 2">
+                <div class="blog-card-img" style="--bg: linear-gradient(135deg, #fa709a 0%, #fee140 100%)">
+                  <span class="blog-date">17.07.2025</span>
+                </div>
+                <div class="blog-card-body"><h3>1 yılı dolmayan işçinin ihbar süresi</h3></div>
+              </div>
+            </div>
+            <div class="blog-slide">
+              <div class="blog-card-overlap animate-on-scroll" style="--delay: 0">
+                <div class="blog-card-img" style="--bg: linear-gradient(135deg, #0c3483 0%, #a2b6df 100%)">
+                  <span class="blog-date">15.07.2025</span>
+                </div>
+                <div class="blog-card-body"><h3>e-Fatura zorunluluğu 2025 güncellemesi</h3></div>
+              </div>
+            </div>
+            <div class="blog-slide">
+              <div class="blog-card-overlap animate-on-scroll" style="--delay: 1">
+                <div class="blog-card-img" style="--bg: linear-gradient(135deg, #f093fb 0%, #f5576c 100%)">
+                  <span class="blog-date">12.07.2025</span>
+                </div>
+                <div class="blog-card-body"><h3>Dijital dönüşümde başarı hikayeleri</h3></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="blog-arrow blog-arrow--next" id="blogNext" aria-label="Sonraki">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+
+      <div style="text-align: center; margin-top: var(--space-10);">
+        <a href="#" class="btn btn-primary btn-lg">
+          Daha Fazlası
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FAQ — Modern Accordion ========== -->
+  <section class="section faq-section" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title-red">Sıkça Sorulan Sorular</h2>
+        <div class="red-line center"></div>
+        <p class="section-subtitle">Dijital dönüşüm çözümlerimiz hakkında merak ettikleriniz.</p>
+      </div>
+
+      <!-- FAQ Pills -->
+      <div class="faq-pills">
+        <button class="faq-pill active" data-faq-cat="e-fatura">e-Fatura</button>
+        <button class="faq-pill" data-faq-cat="e-arsiv">e-Arşiv</button>
+        <button class="faq-pill" data-faq-cat="e-defter">e-Defter</button>
+        <button class="faq-pill" data-faq-cat="e-irsaliye">e-İrsaliye</button>
+        <button class="faq-pill" data-faq-cat="e-smm">e-SMM</button>
+        <button class="faq-pill" data-faq-cat="e-adisyon">e-Adisyon</button>
+        <button class="faq-pill" data-faq-cat="e-mutabakat">e-Mutabakat</button>
+        <button class="faq-pill" data-faq-cat="hesap">Hesap Açma</button>
+        <button class="faq-pill" data-faq-cat="siparis">Sipariş</button>
+      </div>
+
+      <!-- Accordion -->
+      <div class="faq-accordion" id="faqAccordion">
+        <div class="faq-accordion-item" data-faq-cat="e-fatura">
+          <button class="faq-accordion-trigger"><span class="faq-num">01</span><span class="faq-question-text">e-Fatura nedir?</span><svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-accordion-panel"><p>e-Fatura, faturaların internet bağlantısı kullanılarak elektronik ortamda düzenlenmesini ve güvenli bir şekilde iletilmesini sağlayan GİB onaylı uygulamadır.</p></div>
+        </div>
+        <div class="faq-accordion-item" data-faq-cat="e-fatura">
+          <button class="faq-accordion-trigger"><span class="faq-num">02</span><span class="faq-question-text">e-Faturayı kimler kullanabilir?</span><svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-accordion-panel"><p>Brüt satış hasılatı veya net satışları belirli sınırları aşan mükellefler ile GİB tarafından belirlenen sektörlerdeki tüm mükellefler e-Fatura kullanabilir.</p></div>
+        </div>
+        <div class="faq-accordion-item" data-faq-cat="e-fatura">
+          <button class="faq-accordion-trigger"><span class="faq-num">03</span><span class="faq-question-text">e-Fatura uygulamasının avantajları nelerdir?</span><svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-accordion-panel"><p>Maliyet tasarrufu, hız, güvenlik, yasal uyumluluk ve çevre dostu olması en önemli avantajlarıdır.</p></div>
+        </div>
+        <div class="faq-accordion-item" data-faq-cat="e-fatura">
+          <button class="faq-accordion-trigger"><span class="faq-num">04</span><span class="faq-question-text">e-Fatura çözümünü nasıl kullanmaya başlarım?</span><svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-accordion-panel"><p>eLogo ile iletişime geçerek ücretsiz danışmanlık alabilir ve hızlıca e-Fatura kullanmaya başlayabilirsiniz.</p></div>
+        </div>
+        <div class="faq-accordion-item" data-faq-cat="e-fatura">
+          <button class="faq-accordion-trigger"><span class="faq-num">05</span><span class="faq-question-text">e-Fatura ile e-Arşiv arasındaki farklar nedir?</span><svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-accordion-panel"><p>e-Fatura kayıtlı kullanıcılar arasında, e-Arşiv ise kayıtlı olmayan müşteriler ve nihai tüketicilere kesilen faturalar için kullanılır.</p></div>
+        </div>
+        <!-- e-Arşiv -->
+        <div class="faq-accordion-item" data-faq-cat="e-arsiv" style="display:none">
+          <button class="faq-accordion-trigger"><span class="faq-num">01</span><span class="faq-question-text">e-Arşiv Fatura nedir?</span><svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-accordion-panel"><p>e-Arşiv Fatura, e-Fatura mükellefi olmayan müşterilerinize elektronik ortamda fatura kesmenizi sağlayan GİB onaylı uygulamadır.</p></div>
+        </div>
+        <div class="faq-accordion-item" data-faq-cat="e-arsiv" style="display:none">
+          <button class="faq-accordion-trigger"><span class="faq-num">02</span><span class="faq-question-text">e-Arşiv Fatura kimler için zorunludur?</span><svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-accordion-panel"><p>E-ticaret yapan ve belirli ciro limitlerini aşan tüm mükellefler için zorunludur.</p></div>
+        </div>
+        <!-- e-Defter -->
+        <div class="faq-accordion-item" data-faq-cat="e-defter" style="display:none">
+          <button class="faq-accordion-trigger"><span class="faq-num">01</span><span class="faq-question-text">e-Defter nedir?</span><svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-accordion-panel"><p>e-Defter, yevmiye defteri ve defter-i kebirin elektronik ortamda oluşturulması, onaylanması ve saklanmasını sağlar.</p></div>
+        </div>
+        <!-- e-İrsaliye -->
+        <div class="faq-accordion-item" data-faq-cat="e-irsaliye" style="display:none">
+          <button class="faq-accordion-trigger"><span class="faq-num">01</span><span class="faq-question-text">e-İrsaliye nedir?</span><svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-accordion-panel"><p>e-İrsaliye, sevk irsaliyelerinin elektronik ortamda düzenlenmesi ve iletilmesini sağlayan GİB uygulamasıdır.</p></div>
+        </div>
+        <!-- Other categories -->
+        <div class="faq-accordion-item" data-faq-cat="e-smm" style="display:none">
+          <button class="faq-accordion-trigger"><span class="faq-num">01</span><span class="faq-question-text">e-Serbest Meslek Makbuzu nedir?</span><svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-accordion-panel"><p>Serbest meslek erbabının düzenlediği makbuzların elektronik ortamda oluşturulmasını sağlar.</p></div>
+        </div>
+        <div class="faq-accordion-item" data-faq-cat="e-adisyon" style="display:none">
+          <button class="faq-accordion-trigger"><span class="faq-num">01</span><span class="faq-question-text">e-Adisyon nedir?</span><svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-accordion-panel"><p>Yeme-içme sektöründeki adisyonların elektronik ortamda düzenlenmesini sağlayan çözümdür.</p></div>
+        </div>
+        <div class="faq-accordion-item" data-faq-cat="e-mutabakat" style="display:none">
+          <button class="faq-accordion-trigger"><span class="faq-num">01</span><span class="faq-question-text">e-Mutabakat nedir?</span><svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-accordion-panel"><p>Cari hesap mutabakatlarınızı elektronik ortamda hızlıca gerçekleştirmenizi sağlayan çözümdür.</p></div>
+        </div>
+        <div class="faq-accordion-item" data-faq-cat="hesap" style="display:none">
+          <button class="faq-accordion-trigger"><span class="faq-num">01</span><span class="faq-question-text">eLogo hesabını nasıl açarım?</span><svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-accordion-panel"><p>Web sitemizden veya müşteri temsilcimiz aracılığıyla hızlıca hesap açabilirsiniz.</p></div>
+        </div>
+        <div class="faq-accordion-item" data-faq-cat="siparis" style="display:none">
+          <button class="faq-accordion-trigger"><span class="faq-num">01</span><span class="faq-question-text">Sipariş ve hizmet başlatma nasıl yapılır?</span><svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-accordion-panel"><p>Hesabınızı oluşturduktan sonra ürün seçimi yaparak hizmet başlatabilirsiniz.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== EĞİTİMLER — Overlap Cards ========== -->
+  <section class="section training-section" id="training">
+    <div class="container">
+      <div class="section-header" style="text-align: left;">
+        <h2 class="section-title-red">Eğitimler</h2>
+        <div class="red-line"></div>
+        <p class="section-subtitle" style="margin: 0;">eLogo ürünlerine yönelik eğitimlerin detaylı bilgilerini bu sayfada bulabilirsiniz.</p>
+      </div>
+
+      <div class="training-overlap-grid">
+        <div class="training-card-overlap animate-on-scroll" style="--delay: 0">
+          <div class="training-card-img-overlap" style="--bg: linear-gradient(135deg, #1a237e 0%, #5c6bc0 100%)">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="1.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          </div>
+          <div class="training-card-body-overlap">
+            <h4>e-Belge Mevzuat Eğitimi</h4>
+            <a href="#" class="training-link-overlap">Detaylı incele <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          </div>
+        </div>
+
+        <div class="training-card-overlap animate-on-scroll" style="--delay: 1">
+          <div class="training-card-img-overlap" style="--bg: linear-gradient(135deg, #e65100 0%, #ffab40 100%)">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="1.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          </div>
+          <div class="training-card-body-overlap">
+            <h4>e-İrsaliye Mevzuat Eğitimi</h4>
+            <a href="#" class="training-link-overlap">Detaylı incele <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          </div>
+        </div>
+
+        <div class="training-card-overlap animate-on-scroll" style="--delay: 2">
+          <div class="training-card-img-overlap" style="--bg: linear-gradient(135deg, #00897b 0%, #4db6ac 100%)">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="1.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          </div>
+          <div class="training-card-body-overlap">
+            <h4>Logo e-Fatura Eğitimi</h4>
+            <a href="#" class="training-link-overlap">Detaylı incele <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: var(--space-10);">
+        <a href="#" class="btn btn-primary btn-lg">
+          Daha Fazlası
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-brand">
+          <svg width="120" height="36" viewBox="0 0 120 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="4" width="28" height="28" rx="6" fill="#00BCD4"/>
+            <text x="6" y="25" font-family="Inter" font-weight="800" font-size="18" fill="white">e</text>
+            <text x="34" y="26" font-family="Inter" font-weight="700" font-size="22" fill="white">Logo</text>
+          </svg>
+          <ul class="footer-links" style="margin-top: 16px;">
+            <li><a href="#">Hakkımızda</a></li>
+            <li><a href="#">Duyurular</a></li>
+          </ul>
+          <div class="footer-social" style="margin-top: 16px;">
+            <a href="#" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="#" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="#" aria-label="YouTube"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+            <a href="#" aria-label="LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+            <a href="#" aria-label="Twitter / X"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">e-Dönüşüm</h4>
+          <ul class="footer-links">
+            <li><a href="#">e-Fatura</a></li>
+            <li><a href="#">e-Arşiv</a></li>
+            <li><a href="#">e-Defter</a></li>
+            <li><a href="#">e-İrsaliye</a></li>
+            <li><a href="#">e-Serbest Meslek Makbuzu</a></li>
+            <li><a href="#">e-Müstahsil Makbuzu</a></li>
+            <li><a href="#">e-Adisyon</a></li>
+            <li><a href="#">e-Dekont</a></li>
+            <li><a href="#">Tamamlayıcı Servisler</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Finansal Servisler</h4>
+          <ul class="footer-links">
+            <li><a href="#">Online Hesap Özeti</a></li>
+            <li><a href="#">Çek ve Fatura iskonto</a></li>
+            <li><a href="#">e-Mutabakat</a></li>
+            <li><a href="#">eLogo e-Tahsilat</a></li>
+            <li><a href="#">e-Belge Transfer</a></li>
+            <li><a href="#">Fatura Finansmanı</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Politikalar</h4>
+          <ul class="footer-links">
+            <li><a href="#">Gizlilik koşulları</a></li>
+            <li><a href="#">Kullanım şartları</a></li>
+            <li><a href="#">Kişisel veriler</a></li>
+            <li><a href="#">Yönetim Sistemleri</a></li>
+            <li><a href="#">Çerez Politikası</a></li>
+            <li><a href="#">Aydınlatma Metni</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 eLogo</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/form.js"></script>
+</body>
+</html>
