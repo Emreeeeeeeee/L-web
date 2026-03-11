@@ -102,18 +102,14 @@
   animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.35s both;
 }
 
-.hero-content .hero-stats-editorial {
+.hero-content .hero-trust-row {
   animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.45s both;
 }
 
-.hero-content .hero-awards {
-  animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.55s both;
-}
-
-/* Product description fade transition */
-#productDescTitle,
-#productDescText {
-  transition: opacity 0.2s ease;
+/* References Slider */
+@keyframes refSlide {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 /* Reduced Motion */

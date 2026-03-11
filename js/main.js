@@ -34,6 +34,29 @@ document.querySelectorAll('.mobile-link, .mobile-cta').forEach(link => {
 });
 
 // ========================================
+// NAVBAR DROPDOWN TOGGLE (touch support)
+// ========================================
+document.querySelectorAll('.nav-dropdown > .nav-link').forEach(link => {
+  link.addEventListener('click', (e) => {
+    if (window.innerWidth <= 1024 || 'ontouchstart' in window) {
+      e.preventDefault();
+      const parent = link.closest('.nav-dropdown');
+      const isOpen = parent.classList.contains('active');
+      // Close all dropdowns
+      document.querySelectorAll('.nav-dropdown').forEach(d => d.classList.remove('active'));
+      if (!isOpen) parent.classList.add('active');
+    }
+  });
+});
+
+// Close dropdowns on click outside
+document.addEventListener('click', (e) => {
+  if (!e.target.closest('.nav-dropdown')) {
+    document.querySelectorAll('.nav-dropdown').forEach(d => d.classList.remove('active'));
+  }
+});
+
+// ========================================
 // SMOOTH SCROLL FOR ANCHOR LINKS
 // ========================================
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -74,46 +97,6 @@ const scrollObserver = new IntersectionObserver(
 animateElements.forEach(el => scrollObserver.observe(el));
 
 // ========================================
-// HERO SLIDER (5 slides)
-// ========================================
-const heroSlider = document.getElementById('heroSlider');
-if (heroSlider) {
-  const slides = heroSlider.querySelectorAll('.hero-slide');
-  const dots = document.querySelectorAll('.hero-dot');
-  const bgLayers = document.querySelectorAll('.hero-bg-layer');
-  let currentSlide = 0;
-  let heroInterval;
-
-  function goToSlide(index) {
-    slides[currentSlide].classList.remove('active');
-    dots[currentSlide].classList.remove('active');
-    if (bgLayers[currentSlide]) bgLayers[currentSlide].classList.remove('active');
-    currentSlide = (index + slides.length) % slides.length;
-    slides[currentSlide].classList.add('active');
-    dots[currentSlide].classList.add('active');
-    if (bgLayers[currentSlide]) bgLayers[currentSlide].classList.add('active');
-  }
-
-  function startHeroAuto() {
-    heroInterval = setInterval(() => goToSlide(currentSlide + 1), 5000);
-  }
-
-  function resetHeroAuto() {
-    clearInterval(heroInterval);
-    startHeroAuto();
-  }
-
-  dots.forEach(dot => {
-    dot.addEventListener('click', () => {
-      goToSlide(parseInt(dot.dataset.slide));
-      resetHeroAuto();
-    });
-  });
-
-  startHeroAuto();
-}
-
-// ========================================
 // COUNTER ANIMATION
 // ========================================
 function animateCounter(el, onComplete) {
@@ -147,86 +130,15 @@ function animateCounter(el, onComplete) {
   requestAnimationFrame(update);
 }
 
-// Hero stats counter
-const statsEl = document.querySelector('.hero-stats-editorial');
-if (statsEl) {
-  const counterObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.querySelectorAll('[data-count]').forEach(el => animateCounter(el));
-          counterObserver.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.5 }
-  );
-  counterObserver.observe(statsEl);
-}
-
 // ========================================
-// AWARD COUNTER + CELEBRATION EFFECT
+// AWARD COUNTER (no celebration)
 // ========================================
 const awardNum = document.getElementById('awardNumber');
 if (awardNum) {
-  function createCelebration() {
-    const container = document.getElementById('awardCelebration');
-    if (!container) return;
-
-    const colors = ['#C62828', '#FF6F00', '#00BCD4', '#3F51B5', '#FF9800', '#4CAF50'];
-
-    // Left side sparkles
-    for (let i = 0; i < 8; i++) {
-      const particle = document.createElement('div');
-      particle.className = 'confetti-particle';
-      const angle = Math.PI + (Math.random() * Math.PI * 0.7 - Math.PI * 0.35);
-      const distance = 30 + Math.random() * 40;
-      const tx = Math.cos(angle) * distance;
-      const ty = Math.sin(angle) * distance - 10;
-      particle.style.cssText = `
-        left: 18%; top: 50%;
-        background: ${colors[i % colors.length]};
-        width: ${3 + Math.random() * 3}px;
-        height: ${3 + Math.random() * 3}px;
-        border-radius: ${Math.random() > 0.5 ? '50%' : '2px'};
-        --tx: ${tx}px; --ty: ${ty}px;
-        animation: confettiBurst 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) ${i * 0.03}s forwards;
-      `;
-      container.appendChild(particle);
-    }
-
-    // Right side sparkles
-    for (let i = 0; i < 8; i++) {
-      const particle = document.createElement('div');
-      particle.className = 'confetti-particle';
-      const angle = Math.random() * Math.PI * 0.7 - Math.PI * 0.35;
-      const distance = 30 + Math.random() * 40;
-      const tx = Math.cos(angle) * distance;
-      const ty = Math.sin(angle) * distance - 10;
-      particle.style.cssText = `
-        left: 82%; top: 50%;
-        background: ${colors[i % colors.length]};
-        width: ${3 + Math.random() * 3}px;
-        height: ${3 + Math.random() * 3}px;
-        border-radius: ${Math.random() > 0.5 ? '50%' : '2px'};
-        --tx: ${tx}px; --ty: ${ty}px;
-        animation: confettiBurst 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) ${i * 0.03}s forwards;
-      `;
-      container.appendChild(particle);
-    }
-
-    // Cleanup
-    setTimeout(() => { container.innerHTML = ''; }, 1200);
-  }
-
   const awardObserver = new IntersectionObserver(
     ([entry]) => {
       if (entry.isIntersecting) {
-        animateCounter(awardNum, () => {
-          awardNum.classList.add('celebrated');
-          createCelebration();
-          setTimeout(() => awardNum.classList.remove('celebrated'), 700);
-        });
+        animateCounter(awardNum);
         awardObserver.unobserve(entry.target);
       }
     },
@@ -271,137 +183,38 @@ if (!('ontouchstart' in window)) {
 }
 
 // ========================================
-// HORIZONTAL SCROLL CARDS (Category Pills + Arrows)
+// PRODUCT CARD FILTERING
 // ========================================
-const hscrollCards = document.querySelectorAll('.hscroll-card');
-const categoryPills = document.querySelectorAll('.pill');
+const productPills = document.querySelectorAll('.product-filter-pill');
+const productCards = document.querySelectorAll('.product-card');
 
-const productDescriptions = {
-  'e-Fatura': {
-    title: 'e-Fatura nedir?',
-    text: 'e-Fatura, faturaların internet bağlantısı kullanılarak elektronik ortamda veri format ve standardı Gelir İdaresi Başkanlığı tarafından belirlenen ve elektronik belge biçiminde düzenlenen, VUK gereği bir faturada yer alması gereken bilgilerin içerisinde yer aldığı, satıcı ve alıcı arasında dolaşımını güvenli ve sağlıklı bir biçimde sağlamak amacıyla Gelir İdaresi Başkanlığı tarafından oluşturulan uygulamadır.'
-  },
-  'e-Arşiv': { title: 'e-Arşiv nedir?', text: 'e-Arşiv Fatura, e-Fatura mükellefi olmayan müşterilerinize ve nihai tüketicilere kestiğiniz faturaların elektronik ortamda düzenlenmesini sağlayan GİB onaylı bir uygulamadır.' },
-  'e-Defter': { title: 'e-Defter nedir?', text: 'e-Defter, yevmiye defteri ve defter-i kebir\'in elektronik ortamda oluşturulması, onaylanması ve saklanmasını sağlayan GİB onaylı bir uygulamadır.' },
-  'e-İrsaliye': { title: 'e-İrsaliye nedir?', text: 'e-İrsaliye, sevk irsaliyelerinin elektronik ortamda düzenlenmesi, iletilmesi ve saklanmasını sağlayan GİB uygulamasıdır.' },
-  'e-Adisyon': { title: 'e-Adisyon nedir?', text: 'e-Adisyon, yeme-içme sektöründe faaliyet gösteren işletmelerin adisyon bilgilerini elektronik ortamda düzenlemesini sağlayan dijital çözümdür.' },
-  'e-Dekont': { title: 'e-Dekont nedir?', text: 'e-Dekont, banka dekontlarının elektronik ortamda düzenlenmesini ve güvenle saklanmasını sağlayan dijital çözümdür.' },
-  'Fatura Finansmanı': { title: 'Fatura Finansmanı nedir?', text: 'Fatura Finansmanı, e-Faturalarınız üzerinden teminatsız kredi teklifleri almanızı sağlayan dijital finansman çözümüdür.' },
-  'e-Tahsilat': { title: 'e-Tahsilat nedir?', text: 'e-Tahsilat, dijital ortamda tahsilat süreçlerinizi yönetmenizi sağlayan çözümdür.' },
-  'e-Mutabakat': { title: 'e-Mutabakat nedir?', text: 'e-Mutabakat, cari hesap mutabakatlarınızı elektronik ortamda gerçekleştirmenizi sağlayan çözümdür.' },
-  'Online Hesap Özeti': { title: 'Online Hesap Özeti nedir?', text: 'Online Hesap Özeti ile hesap hareketlerinizi anlık olarak takip edebilirsiniz.' },
-  'e-Defter Saklama': { title: 'e-Defter Saklama nedir?', text: 'e-Defter Saklama, elektronik defterlerinizin GİB mevzuatına uygun şekilde güvenli saklanmasını sağlar.' },
-  'e-Belge Transfer': { title: 'e-Belge Transfer nedir?', text: 'e-Belge Transfer, elektronik belgelerinizi farklı platformlar arasında güvenle aktarmanızı sağlar.' },
-  'Logo İşbaşı': { title: 'Logo İşbaşı nedir?', text: 'Logo İşbaşı, KOBİ\'ler için geliştirilmiş bulut tabanlı ön muhasebe ve iş yönetimi çözümüdür.' }
-};
-
-const productDescTitle = document.getElementById('productDescTitle');
-const productDescText = document.getElementById('productDescText');
-
-function updateProductDesc(name) {
-  const desc = productDescriptions[name];
-  if (desc && productDescTitle && productDescText) {
-    productDescTitle.style.opacity = '0';
-    productDescText.style.opacity = '0';
-    setTimeout(() => {
-      productDescTitle.textContent = desc.title;
-      productDescText.textContent = desc.text;
-      productDescTitle.style.opacity = '1';
-      productDescText.style.opacity = '1';
-    }, 200);
-  }
-}
-
-function getVisibleHscrollCards() {
-  return [...hscrollCards].filter(c => c.style.display !== 'none');
-}
-
-function setActiveHscrollCard(card) {
-  hscrollCards.forEach(c => c.classList.remove('active'));
-  card.classList.add('active');
-  card.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
-  const label = card.querySelector('.hscroll-label')?.textContent;
-  if (label) updateProductDesc(label);
-}
-
-categoryPills.forEach(pill => {
+productPills.forEach(pill => {
   pill.addEventListener('click', () => {
-    const category = pill.dataset.category;
-    categoryPills.forEach(p => p.classList.remove('active'));
+    const cat = pill.dataset.productCat;
+
+    // Update active pill
+    productPills.forEach(p => p.classList.remove('active'));
     pill.classList.add('active');
 
-    hscrollCards.forEach(card => {
-      card.style.display = card.dataset.category === category ? '' : 'none';
-      card.classList.remove('active');
+    // Filter cards with staggered fade-in
+    let visibleIndex = 0;
+    productCards.forEach(card => {
+      if (card.dataset.productCat === cat) {
+        card.style.display = '';
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(16px)';
+        const delay = visibleIndex * 80;
+        setTimeout(() => {
+          card.style.opacity = '1';
+          card.style.transform = 'translateY(0)';
+        }, delay);
+        visibleIndex++;
+      } else {
+        card.style.display = 'none';
+      }
     });
-
-    const visible = getVisibleHscrollCards();
-    if (visible.length > 0) setActiveHscrollCard(visible[0]);
   });
 });
-
-hscrollCards.forEach(card => {
-  card.addEventListener('click', () => setActiveHscrollCard(card));
-});
-
-// Hscroll arrow navigation
-const hscrollPrev = document.getElementById('hscrollPrev');
-const hscrollNext = document.getElementById('hscrollNext');
-
-if (hscrollPrev && hscrollNext) {
-  hscrollPrev.addEventListener('click', () => {
-    const visible = getVisibleHscrollCards();
-    const activeIdx = visible.findIndex(c => c.classList.contains('active'));
-    if (activeIdx > 0) setActiveHscrollCard(visible[activeIdx - 1]);
-    else if (visible.length > 0) setActiveHscrollCard(visible[visible.length - 1]);
-  });
-
-  hscrollNext.addEventListener('click', () => {
-    const visible = getVisibleHscrollCards();
-    const activeIdx = visible.findIndex(c => c.classList.contains('active'));
-    if (activeIdx < visible.length - 1) setActiveHscrollCard(visible[activeIdx + 1]);
-    else if (visible.length > 0) setActiveHscrollCard(visible[0]);
-  });
-}
-
-// ========================================
-// BLOG SLIDER
-// ========================================
-const blogSlider = document.getElementById('blogSlider');
-const blogPrev = document.getElementById('blogPrev');
-const blogNext = document.getElementById('blogNext');
-
-if (blogSlider && blogPrev && blogNext) {
-  const blogTrack = blogSlider.querySelector('.blog-slider-track');
-  const blogSlides = blogSlider.querySelectorAll('.blog-slide');
-  let blogIndex = 0;
-
-  function getBlogSlidesPerView() {
-    if (window.innerWidth <= 768) return 1;
-    if (window.innerWidth <= 1024) return 2;
-    return 3;
-  }
-
-  function updateBlogSlider() {
-    const perView = getBlogSlidesPerView();
-    const maxIndex = Math.max(0, blogSlides.length - perView);
-    blogIndex = Math.min(blogIndex, maxIndex);
-    const offset = -(blogIndex * (100 / perView));
-    blogTrack.style.transform = `translateX(${offset}%)`;
-  }
-
-  blogPrev.addEventListener('click', () => {
-    if (blogIndex > 0) { blogIndex--; updateBlogSlider(); }
-  });
-
-  blogNext.addEventListener('click', () => {
-    const perView = getBlogSlidesPerView();
-    const maxIndex = Math.max(0, blogSlides.length - perView);
-    if (blogIndex < maxIndex) { blogIndex++; updateBlogSlider(); }
-  });
-
-  window.addEventListener('resize', updateBlogSlider);
-}
 
 // ========================================
 // FAQ ACCORDION
@@ -473,6 +286,20 @@ if (editorialHeading) {
     { threshold: 0.3 }
   );
   clipObserver.observe(editorialHeading);
+}
+
+// ========================================
+// STICKY CTA — Show after scrolling past hero
+// ========================================
+const stickyCta = document.getElementById('stickyCta');
+if (stickyCta && hero) {
+  const ctaObserver = new IntersectionObserver(
+    ([entry]) => {
+      stickyCta.classList.toggle('visible', !entry.isIntersecting);
+    },
+    { threshold: 0 }
+  );
+  ctaObserver.observe(hero);
 }
 
 // ========================================
