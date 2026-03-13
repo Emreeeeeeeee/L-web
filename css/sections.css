@@ -40,6 +40,37 @@
 }
 
 /* ========================================
+   LANDING HEADER
+   ======================================== */
+.landing-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(26, 35, 126, 0.08);
+}
+
+.landing-header-wrap {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.landing-logo {
+  display: inline-flex;
+  align-items: center;
+}
+
+.landing-logo-img {
+  display: block;
+  width: auto;
+  height: 38px;
+}
+
+/* ========================================
    SECTION HEADER VARIANTS
    ======================================== */
 .section-title-red {
@@ -101,11 +132,17 @@
   box-shadow: 0 1px 20px rgba(26, 35, 126, 0.08);
 }
 
+.navbar > .container {
+  padding-left: var(--space-6);
+  padding-right: var(--space-6);
+}
+
 .navbar-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: var(--nav-height);
+  gap: var(--space-4);
 }
 
 .navbar-logo { flex-shrink: 0; }
@@ -826,6 +863,7 @@
 
 /* Video Placeholder */
 .video-placeholder {
+  width: 100%;
   aspect-ratio: 16/10;
   background: linear-gradient(135deg, #e0e0e0 0%, #bdbdbd 100%);
   border-radius: var(--radius-2xl);
@@ -838,6 +876,7 @@
   box-shadow: var(--shadow-xl);
   cursor: pointer;
   transition: var(--transition);
+  border: 0;
 }
 
 .video-placeholder:hover { transform: scale(1.02); }
@@ -866,6 +905,73 @@
 .video-logo-e { font-size: 2.5rem; font-weight: 800; color: var(--primary); }
 .video-logo-text { font-size: 2.5rem; font-weight: 800; color: var(--red); }
 .video-tagline { font-size: 1rem; font-weight: 600; color: var(--primary); margin-top: 4px; }
+
+.video-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-6);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.video-lightbox.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.video-lightbox-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(7, 11, 36, 0.82);
+  backdrop-filter: blur(8px);
+}
+
+.video-lightbox-dialog {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 1080px);
+}
+
+.video-lightbox-close {
+  position: absolute;
+  top: -44px;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  transition: var(--transition-fast);
+}
+
+.video-lightbox-close:hover {
+  background: rgba(255, 255, 255, 0.24);
+}
+
+.video-lightbox-frame {
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: var(--shadow-2xl);
+  background: #000;
+}
+
+.video-lightbox-frame iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+}
 
 /* ========================================
    ABOUT DIGITAL - Product Cards Grid
@@ -1371,7 +1477,7 @@
 .footer {
   background: #060a1f;
   color: rgba(255, 255, 255, 0.7);
-  padding-top: var(--space-20);
+  padding-top: var(--space-4);
 }
 
 .footer-grid {
@@ -1424,7 +1530,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: var(--space-6) 0;
+  padding: var(--space-3) 0;
 }
 
 .footer-bottom p { font-size: var(--fs-xs); color: rgba(255, 255, 255, 0.3); }
