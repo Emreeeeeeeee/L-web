@@ -129,7 +129,7 @@
 
               <div class="form-checkbox">
                 <input type="checkbox" id="kvkk" required>
-                <label for="kvkk"><a href="https://www.logo.com.tr/kisisel-veriler" target="_blank">KVKK Aydınlatma Metni</a>'ni okudum, onaylıyorum.</label>
+                <label for="kvkk"><a href="#" id="kvkkModalOpen" onclick="event.preventDefault();document.getElementById('kvkkModal').classList.add('is-open');">KVKK Aydınlatma Metni</a>'ni okudum, onaylıyorum.</label>
               </div>
 
               <button type="submit" class="btn btn-primary btn-lg btn-submit">
@@ -612,6 +612,120 @@
           referrerpolicy="strict-origin-when-cross-origin"
           allowfullscreen
         ></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== KVKK MODAL ========== -->
+  <div class="kvkk-modal" id="kvkkModal" aria-hidden="true">
+    <div class="kvkk-modal-backdrop" onclick="document.getElementById('kvkkModal').classList.remove('is-open');"></div>
+    <div class="kvkk-modal-dialog" role="dialog" aria-modal="true" aria-label="KVKK Aydınlatma Metni">
+      <div class="kvkk-modal-header">
+        <h3>Kişisel Veriler — Aydınlatma Metni</h3>
+        <button type="button" class="kvkk-modal-close" onclick="document.getElementById('kvkkModal').classList.remove('is-open');" aria-label="Kapat">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+      </div>
+      <div class="kvkk-modal-body">
+        <p>Bu aydınlatma metni, 6698 sayılı Kişisel Verilerin Korunması Kanunu ("Kanun") kapsamında, Logo Yazılım Sanayi ve Ticaret A.Ş.'nin veri sorumlusu sıfatıyla hareket ettiği hallerde, Kanun'un 10.maddesine uygun olarak, gerçek kişilere ("Veri Sahibi"), kişisel verilerinin toplanma, işlenme, saklanma, korunma ve imha süreç, şekil ve amaçları ile Kanun uyarınca haklarına ve haklarını kullanma yöntemlerine ilişkin bilgi verilmesi amacıyla hazırlanmıştır.</p>
+
+        <p><a href="https://www.logo.com.tr/logo-grup-sirketleri" target="_blank">Logo grup şirketleri için tıklayınız.</a></p>
+
+        <p>Kişisel verilerinizin işlenmesine ilişkin ayrıntılı bilgiye "Logo Grubu Şirketleri Kişisel Verilerin Korunması, İşlenmesi, Saklanması Ve İmhası Politikası"ndan ("Politika") ulaşabilirsiniz. <a href="https://www.logo.com.tr/kvkk-politika" target="_blank">Politika'ya erişmek için tıklayınız.</a></p>
+
+        <h4>Kişisel Verilerinizi Hangi Amaçlarla İşliyoruz?</h4>
+        <p>Veri Sorumlusu olarak kişisel verilerinizi Kanun'un maddelerine uygun olarak ve aşağıdaki amaçlarla işleyebilmekteyiz:</p>
+        <ul>
+          <li>Sözleşmelerin müzakeresi, akdedilmesi ve ifası,</li>
+          <li>Ürün ve hizmetlerin sunulabilmesi,</li>
+          <li>Sunulan ürün ve hizmetlerin taleplere uygun olarak özelleştirilmesi; müşteri ihtiyaçları, yasal ve teknik gelişmeler sebebiyle güncellenmesi, geliştirilmesi,</li>
+          <li>Sunulan ürün ve hizmetler özelinde, sistemlere kullanıcı tanımlamalarının yapılması,</li>
+          <li>Çağrı merkezi ve uzaktan destek hizmetlerinin sağlanması, çağrı sayısı ve içerik takibi,</li>
+          <li>Yeni veya mevcut ürün, hizmet ve kampanyaların duyurulması, satış ve pazarlama faaliyetlerinin yürütülmesi,</li>
+          <li>Pazar araştırması yapılması,</li>
+          <li>İstatistik oluşturulması ve kullanımların analiz edilmesi,</li>
+          <li>Ürün, hizmet ve servis bedellerinin ödenmesi, tahsil edilmesi, tahsilat yönteminin seçilmesi,</li>
+          <li>İrtibat/iletişim sağlanması,</li>
+          <li>İşbirliği yapılan firmalar, tedarikçiler, yeniden satıcılar ve hizmet alınan firmalarla olan ticari ilişkilerin yürütülmesi,</li>
+          <li>İşbirliği çerçevesinde raporlama yapılması,</li>
+          <li>Yeniden satıcıların iş ortaklığı başvuru sürecinin değerlendirilmesi,</li>
+          <li>Şirketin ticari stratejilerinin geliştirilmesi ve planlarının yapılması,</li>
+          <li>Logo Grubu Şirketleri tarafından memnuniyet ölçümü anketleri için iletişim kurulması,</li>
+          <li>Anlaşmalı web sitelerinden ve kurumlardan yapılan alışverişlerde indirim sağlanması,</li>
+          <li>Logo Grubu Şirketleri tarafından düzenlenen etkinliklerde/eğitimlerde katılımcı kaydının oluşturulması, sertifikaların/katılım belgelerinin düzenlenmesi, ödül/hediye sahiplerinin belirlenmesi ve ödül/hediyelerin teslimi,</li>
+          <li>Adli/idari süreçlerin yönetimi, kamu kurum kuruluşlarından gelen taleplere cevap verilmesi, yasal düzenlemelere bağlı olarak hukuki yükümlülüklerin yerine getirilmesi, hukuki uyuşmazlıkların çözümlenmesi,</li>
+          <li>Yatırımcı ilişkilerinin yürütülmesi,</li>
+          <li>Şirketin başka bir şirket ile birleşmesi, bölünmesi, tamamının veya bir kısmının devredilmesi halinde bu hukuki işlemden doğan sonuçların temin edilmesi,</li>
+          <li>Sosyal medya paylaşımlarında Logo Grubu Şirketleri çalışanların, Gerçek Kişi Yeniden Satıcı/Müşterilerin, Yeniden Satıcı/Müşteri İlgililerinin tanıtılması,</li>
+          <li>İş görüşmelerinin yürütülmesi, iş başvurularının değerlendirilmesi,</li>
+          <li>İş ilişkisinin/sözleşmesinin kurulması, yürütülmesi ve sonlandırılması,</li>
+          <li>Logo Grubu Şirketleri çalışanlarının iş sözleşmelerinden doğan asıl ve yan haklardan yararlandırılması, performansının ve çalışmalarının değerlendirilmesi,</li>
+          <li>Çalışanlara kullanıcı hesabı açılması, şirket içi kimlik ve yemek kartı verilmesi,</li>
+          <li>Şirket çalışanlarının ulaşım organizasyonunun sağlanması, şirket havuz araçlarının takibi,</li>
+          <li>Şirket adına bir organizasyona katılım olması durumunda, katılımcı kaydının oluşturulması,</li>
+          <li>Çalışanların eğitimlere katılım ve sertifika kayıtlarının oluşturulması,</li>
+          <li>Ziyaretçi kayıtlarının oluşturulması ve takibi,</li>
+          <li>Şirketin iç ve çevre güvenliği ile Web Sitesi'nin ve Uygulamalar'ın güvenliğinin sağlanması,</li>
+          <li>Web Sitesi'nin kullanım analizi,</li>
+          <li>Kişisel veri envanterinin oluşturulması,</li>
+          <li>Kişisel verilere ilişkin olanlar dahil, yazılı, sözlü veya elektronik olarak iletilen tüm soru, talep, öneri, şikâyet ve başvuruların değerlendirilmesi, bunlara cevap verilmesi.</li>
+        </ul>
+
+        <h4>İşlenen Kişisel Verilerinizi Kimlere Hangi Amaçlarla Aktarıyoruz?</h4>
+        <p>Kişisel verileriniz, yukarıda belirttiğimiz amaçlar kapsamında ve Kanun ve kişisel verilere ilişkin yürürlükte bulunan diğer emredici mevzuat hükümlerine uygun olarak, yurt içinde veya yurt dışındaki aşağıda belirtilen üçüncü kişilere aktarılabilmektedir:</p>
+        <ul>
+          <li>Danışmanlar</li>
+          <li>Denetim Firmaları</li>
+          <li>Hizmet Alınan Firmalar</li>
+          <li>İşbirliği Yapılan Firmalar</li>
+          <li>Logo Grubu Şirketleri</li>
+          <li>Müşteriler</li>
+          <li>Pay Sahipleri</li>
+          <li>Şirket Yetkilileri</li>
+          <li>Tedarikçiler</li>
+          <li>Teknopark Yönetimi (Yönetici Şirket)</li>
+          <li>Bankalar ve Finans Kuruluşları</li>
+          <li>Yargısal Merciler ve Kamu Otoriterleri</li>
+          <li>Yeniden Satıcılar</li>
+          <li>Merkezi Kayıt Kuruluşu, Kamuyu Aydınlatma Platformu, Borsa İstanbul A.Ş., Saklama Kuruluşları, Sermaye Piyasası Kurulu</li>
+        </ul>
+
+        <h4>Kişisel Veri Toplama Yöntemlerimiz ve Toplamamızın Hukuki Sebepleri Nelerdir?</h4>
+        <p>Kişisel Verilerinizi; Politika'nın, Kanun'un ve ilgili sair mevzuatın düzenlemelerine uygun olarak, yazılı, sözlü, elektronik yollardan, görüntü/ses kaydı yoluyla veya fiziksel olarak sizinle karşı karşıya gelmek suretiyle toplayabiliyor ve işleyebiliyoruz.</p>
+        <p>Veri toplama sürecimiz; i) Web Sitesi, mobil uygulamalar, e-posta, işe alım portalları dahil dijital mecralar veya yazılım üzerinden; ii) sözleşmeler, başvurular, formlar, çağrı merkezi, uzaktan destek, satış ve pazarlama birimi, Web Siteleri'ndeki çerezler, kartvizit, telefon gibi vasıtalar aracılığıyla; veya iii) Veri Sahibi ile yüz yüze yapılan görüşmeler aracılığıyla gerçekleşebilmektedir.</p>
+
+        <h4>Veri Sahibi Olarak Haklarınız Nelerdir?</h4>
+        <p>Kanun'un 11. maddesi uyarınca, Veri Sahibi olarak Şirketimize başvurarak kendinizle ilgili;</p>
+        <ul>
+          <li>Verilerinizin işlenip işlenmediğini öğrenme,</li>
+          <li>Verileriniz işlenmişse buna ilişkin bilgi talep etme,</li>
+          <li>Verilerin işlenme amacını ve bunların amacına uygun kullanılıp kullanılmadığını öğrenme,</li>
+          <li>Yurt içinde veya yurt dışında Verilerin aktarıldığı üçüncü kişileri bilme,</li>
+          <li>Verilerin eksik veya yanlış işlenmiş olması hâlinde bunların düzeltilmesini ve bu kapsamda yapılan işlemin Verilerin aktarıldığı üçüncü kişilere bildirilmesini isteme,</li>
+          <li>Kanun ve ilgili diğer mevzuat hükümlerine uygun olarak işlenmiş olmasına rağmen, işlenmesini gerektiren sebeplerin ortadan kalkması hâlinde Verilerin silinmesini veya yok edilmesini ve bu kapsamda yapılan işlemin Verilerin aktarıldığı üçüncü kişilere bildirilmesini isteme,</li>
+          <li>İşlenen Verilerin münhasıran otomatik sistemler vasıtasıyla analiz edilmesi suretiyle kişinin kendisi aleyhine bir sonucun ortaya çıkmasına itiraz etme,</li>
+          <li>Verilerin kanuna aykırı olarak işlenmesi sebebiyle zarara uğramanız hâlinde zararın giderilmesini talep etme,</li>
+        </ul>
+        <p>haklarına sahipsiniz.</p>
+
+        <p>Ancak Kişisel Verilerin Korunması Kanunu'nun 28/2. maddesi hükmü gereği aşağıdaki hallerde zararın giderilmesini talep etme hakkınız hariç yukarıda sayılan haklarınızı kullanamazsınız:</p>
+        <ul>
+          <li>Kişisel veri işlemenin suç işlenmesinin önlenmesi veya suç soruşturması için gerekli olması.</li>
+          <li>İlgili kişinin kendisi tarafından alenileştirilmiş kişisel verilerin işlenmesi.</li>
+          <li>Kişisel veri işlemenin kanunun verdiği yetkiye dayanılarak görevli ve yetkili kamu kurum ve kuruluşları ile kamu kurumu niteliğindeki meslek kuruluşlarınca, denetleme veya düzenleme görevlerinin yürütülmesi ile disiplin soruşturma veya kovuşturması için gerekli olması.</li>
+          <li>Kişisel veri işlemenin bütçe, vergi ve mali konulara ilişkin olarak Devletin ekonomik ve mali çıkarlarının korunması için gerekli olması.</li>
+        </ul>
+
+        <p>Haklarınızı kullanmak istemeniz durumunda, taleplerinizi; yazılı olarak veya kayıtlı elektronik posta (KEP), güvenli elektronik imza, mobil imza ya da tarafınızdan Şirketimize daha önce bildirilen ve Şirketimiz sisteminde kayıtlı bulunan elektronik posta adresiniz vasıtasıyla Şirketimize iletebilirsiniz.</p>
+
+        <p>Haklarınızı kullanmak üzere Şirketimize başvururken aşağıda belirtilen yöntemlerden birini tercih edebilirsiniz:</p>
+        <ul>
+          <li>Posta yoluyla, Şirketimizin Gebze Organize Sanayi Bölgesi, Şahabettin Bilgisu Cad. No:609 Gebze/Kocaeli adresine yazılı olarak gönderebilirsiniz.</li>
+          <li>Sistemlerimizde kayıtlı bulunan e-posta adresinizi kullanarak, <strong>kvkk1@logo.com.tr</strong> e-posta adresine taleplerinizi içeren bir e-posta gönderebilirsiniz.</li>
+          <li>Veri Sorumlusuna Başvuru Usul ve Esasları Hakkında Tebliğ'de yer alan diğer yöntemlerle taleplerinizi bize iletebilirsiniz.</li>
+        </ul>
+
+        <p>Talebinizin niteliğine göre en kısa sürede ve en geç otuz gün içinde başvurularınız ücretsiz olarak sonuçlandırılacaktır; ancak işlemin ayrıca bir maliyet gerektirmesi halinde Kişisel Verileri Koruma Kurulu tarafından belirlenecek tarifeye göre tarafınızdan ücret talep edilebilecektir.</p>
       </div>
     </div>
   </div>

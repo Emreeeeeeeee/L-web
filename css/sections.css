@@ -1641,3 +1641,111 @@
   padding: var(--space-3) 0;
   border-top: none;
 }
+
+/* ── KVKK Modal ── */
+.kvkk-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 3000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-6);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.kvkk-modal.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.kvkk-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(7, 11, 36, 0.8);
+  backdrop-filter: blur(6px);
+}
+
+.kvkk-modal-dialog {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 720px);
+  max-height: 80vh;
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-2xl);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.kvkk-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-5) var(--space-6);
+  border-bottom: 1px solid var(--neutral-200);
+  flex-shrink: 0;
+}
+
+.kvkk-modal-header h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin: 0;
+}
+
+.kvkk-modal-close {
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  border: none;
+  background: var(--neutral-100);
+  color: var(--neutral-600);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.kvkk-modal-close:hover {
+  background: var(--neutral-200);
+}
+
+.kvkk-modal-body {
+  padding: var(--space-6);
+  overflow-y: auto;
+  font-size: 0.875rem;
+  line-height: 1.7;
+  color: var(--neutral-700);
+}
+
+.kvkk-modal-body h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin: var(--space-6) 0 var(--space-3);
+}
+
+.kvkk-modal-body p {
+  margin: 0 0 var(--space-3);
+}
+
+.kvkk-modal-body ul {
+  margin: 0 0 var(--space-4);
+  padding-left: var(--space-5);
+}
+
+.kvkk-modal-body li {
+  margin-bottom: var(--space-1);
+}
+
+.kvkk-modal-body a {
+  color: var(--primary-vivid);
+  text-decoration: underline;
+}
