@@ -349,6 +349,7 @@
   display: flex;
   align-items: center;
   padding-top: var(--nav-height);
+  padding-bottom: 90px;
   overflow: hidden;
 }
 
@@ -486,50 +487,62 @@
 
 /* ── Hero Highlights Bar ── */
 .hero-highlights-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   display: flex;
-  gap: 0;
-  margin-top: var(--space-10);
-  width: 100%;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(255,255,255,0.1);
+  z-index: 2;
 }
 
 .highlight-item {
-  flex: 1 0 160px;
+  flex: 1;
   text-align: center;
   padding: var(--space-4) var(--space-3);
-  border-right: 1px solid rgba(255,255,255,0.12);
+  border-right: 1px solid rgba(255,255,255,0.08);
   color: rgba(255,255,255,0.9);
+  transition: background 0.2s ease;
 }
 
 .highlight-item:last-child {
   border-right: none;
 }
 
+.highlight-item:hover {
+  background: rgba(255,255,255,0.06);
+}
+
 .highlight-item--promo {
-  background: rgba(255,255,255,0.08);
-  border-radius: var(--radius-lg) 0 0 var(--radius-lg);
+  background: rgba(198, 40, 40, 0.25);
+  border-right-color: rgba(255,255,255,0.08);
+}
+
+.highlight-item--promo:hover {
+  background: rgba(198, 40, 40, 0.35);
 }
 
 .highlight-icon {
   display: flex;
   justify-content: center;
-  margin-bottom: var(--space-2);
-  color: rgba(255,255,255,0.6);
+  margin-bottom: 6px;
+  color: rgba(255,255,255,0.5);
 }
 
 .highlight-item strong {
   display: block;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 700;
-  margin-bottom: 4px;
+  margin-bottom: 3px;
   color: #fff;
 }
 
 .highlight-item p {
-  font-size: 0.75rem;
-  line-height: 1.4;
-  color: rgba(255,255,255,0.65);
+  font-size: 0.7rem;
+  line-height: 1.35;
+  color: rgba(255,255,255,0.55);
   margin: 0;
 }
 
