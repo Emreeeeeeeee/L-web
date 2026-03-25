@@ -226,8 +226,12 @@
   .form-header { padding: var(--space-4) var(--space-4); }
   .hero-form { padding: var(--space-4); }
   .form-input, .form-select {
-    padding: 10px 12px 10px 38px;
-    font-size: 0.85rem;
+    padding: 8px 10px 8px 36px;
+    font-size: 0.82rem;
+  }
+  .form-label {
+    left: 36px;
+    font-size: 0.82rem;
   }
   .input-wrapper { margin-bottom: 0; }
 

@@ -676,20 +676,22 @@
 
 .input-icon {
   position: absolute;
-  left: var(--space-4);
+  left: 12px;
   top: 50%;
   transform: translateY(-50%);
   color: var(--neutral-400);
   transition: var(--transition);
   pointer-events: none;
+  width: 16px;
+  height: 16px;
 }
 
 .form-input {
   width: 100%;
-  padding: var(--space-4) var(--space-4) var(--space-4) 44px;
+  padding: 10px 12px 10px 40px;
   border: 2px solid var(--neutral-200);
   border-radius: var(--radius-md);
-  font-size: var(--fs-body);
+  font-size: var(--fs-small);
   color: var(--neutral-900);
   transition: var(--transition);
   background: var(--neutral-50);
@@ -706,10 +708,10 @@
 
 .form-label {
   position: absolute;
-  left: 44px;
+  left: 40px;
   top: 50%;
   transform: translateY(-50%);
-  font-size: var(--fs-body);
+  font-size: var(--fs-small);
   color: var(--neutral-400);
   pointer-events: none;
   transition: var(--transition);
@@ -726,18 +728,38 @@
   background: var(--white);
 }
 
+/* Reset the :not(:placeholder-shown) rule for select — select doesn't have placeholder */
+.form-select:invalid ~ .form-label {
+  top: 50%;
+  font-size: var(--fs-small);
+  color: var(--neutral-400);
+  font-weight: 400;
+  background: transparent;
+  transform: translateY(-50%);
+}
+
 /* Select dropdown */
 .form-select {
   appearance: none;
   -webkit-appearance: none;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
-  background-position: right 14px center;
+  background-position: right 12px center;
   cursor: pointer;
 }
 
+/* When select has no value selected, hide text so label shows inside */
+.form-select:invalid {
+  color: transparent;
+}
+
+.form-select:focus,
+.form-select.has-value {
+  color: var(--neutral-900);
+}
+
 .form-select:focus ~ .form-label,
-.form-select:valid ~ .form-label {
+.form-select.has-value ~ .form-label {
   top: 0;
   font-size: var(--fs-xs);
   color: var(--primary-vivid);

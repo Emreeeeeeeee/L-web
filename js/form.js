@@ -6,9 +6,21 @@ const form = document.getElementById('heroForm');
 const fullNameInput = document.getElementById('fullName');
 const phoneInput = document.getElementById('phone');
 const companyInput = document.getElementById('companyName');
+const productSelect = document.getElementById('productInterest');
 const kvkkCheckbox = document.getElementById('kvkk');
 const submitBtn = form.querySelector('.btn-submit');
 const formSuccess = document.getElementById('formSuccess');
+
+// Select floating label: add/remove has-value class
+if (productSelect) {
+  productSelect.addEventListener('change', () => {
+    if (productSelect.value) {
+      productSelect.classList.add('has-value');
+    } else {
+      productSelect.classList.remove('has-value');
+    }
+  });
+}
 
 // ========================================
 // PHONE FORMATTING
