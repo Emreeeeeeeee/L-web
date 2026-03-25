@@ -247,27 +247,6 @@ if (editorialHeading) {
   clipObserver.observe(editorialHeading);
 }
 
-// ========================================
-// HIGHLIGHTS SLIDER (3+3, auto-rotate)
-// ========================================
-const highlightsSlider = document.getElementById('highlightsSlider');
-if (highlightsSlider) {
-  const slides = highlightsSlider.querySelectorAll('.highlights-slide');
-  let currentSlide = 0;
-  let paused = false;
-
-  function showNextSlide() {
-    if (paused) return;
-    slides[currentSlide].classList.remove('active');
-    currentSlide = (currentSlide + 1) % slides.length;
-    slides[currentSlide].classList.add('active');
-  }
-
-  const interval = setInterval(showNextSlide, 2000);
-
-  highlightsSlider.addEventListener('mouseenter', () => { paused = true; });
-  highlightsSlider.addEventListener('mouseleave', () => { paused = false; });
-}
 
 // ========================================
 // STICKY CTA — Show after scrolling past hero
