@@ -485,23 +485,43 @@
   flex-shrink: 0;
 }
 
-/* ── Hero Highlights Bar ── */
+/* ── Hero Highlights Bar (Slider) ── */
 .hero-highlights-bar {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  display: flex;
   background: rgba(255,255,255,0.06);
   backdrop-filter: blur(12px);
   border-top: 1px solid rgba(255,255,255,0.1);
   z-index: 2;
+  overflow: hidden;
+}
+
+.highlights-track {
+  position: relative;
+  width: 100%;
+}
+
+.highlights-slide {
+  display: none;
+  width: 100%;
+  animation: highlightFade 0.5s ease;
+}
+
+.highlights-slide.active {
+  display: flex;
+}
+
+@keyframes highlightFade {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .highlight-item {
   flex: 1;
   text-align: center;
-  padding: var(--space-4) var(--space-3);
+  padding: var(--space-4) var(--space-4);
   border-right: 1px solid rgba(255,255,255,0.08);
   color: rgba(255,255,255,0.9);
   transition: background 0.2s ease;
@@ -517,7 +537,6 @@
 
 .highlight-item--promo {
   background: rgba(198, 40, 40, 0.25);
-  border-right-color: rgba(255,255,255,0.08);
 }
 
 .highlight-item--promo:hover {
