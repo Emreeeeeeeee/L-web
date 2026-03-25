@@ -151,12 +151,11 @@
   display: block;
   height: 38px;
   width: auto;
-  transition: filter 0.3s ease;
-  filter: brightness(0) invert(1);
+  transition: opacity 0.3s ease;
 }
 
 .navbar.scrolled .logo-img {
-  filter: none;
+  opacity: 0.96;
 }
 
 .navbar-links {
@@ -485,6 +484,55 @@
   flex-shrink: 0;
 }
 
+/* ── Hero Highlights Bar ── */
+.hero-highlights-bar {
+  display: flex;
+  gap: 0;
+  margin-top: var(--space-10);
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.highlight-item {
+  flex: 1 0 160px;
+  text-align: center;
+  padding: var(--space-4) var(--space-3);
+  border-right: 1px solid rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.9);
+}
+
+.highlight-item:last-child {
+  border-right: none;
+}
+
+.highlight-item--promo {
+  background: rgba(255,255,255,0.08);
+  border-radius: var(--radius-lg) 0 0 var(--radius-lg);
+}
+
+.highlight-icon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--space-2);
+  color: rgba(255,255,255,0.6);
+}
+
+.highlight-item strong {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: #fff;
+}
+
+.highlight-item p {
+  font-size: 0.75rem;
+  line-height: 1.4;
+  color: rgba(255,255,255,0.65);
+  margin: 0;
+}
+
 /* Stats - Editorial oversized */
 .hero-stats-editorial {
   display: flex;
@@ -640,6 +688,25 @@
 
 .form-input:focus ~ .form-label,
 .form-input:not(:placeholder-shown) ~ .form-label {
+  top: 0;
+  font-size: var(--fs-xs);
+  color: var(--primary-vivid);
+  font-weight: 500;
+  background: var(--white);
+}
+
+/* Select dropdown */
+.form-select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  cursor: pointer;
+}
+
+.form-select:focus ~ .form-label,
+.form-select:valid ~ .form-label {
   top: 0;
   font-size: var(--fs-xs);
   color: var(--primary-vivid);
@@ -1477,7 +1544,7 @@
 .footer {
   background: #060a1f;
   color: rgba(255, 255, 255, 0.7);
-  padding-top: var(--space-4);
+  padding-top: var(--space-20);
 }
 
 .footer-grid {
@@ -1530,7 +1597,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: var(--space-3) 0;
+  padding: var(--space-4) 0;
 }
 
 .footer-bottom p { font-size: var(--fs-xs); color: rgba(255, 255, 255, 0.3); }
+
+.footer--minimal {
+  padding: var(--space-4) 0;
+}
+
+.footer--minimal .footer-bottom {
+  padding: var(--space-3) 0;
+  border-top: none;
+}

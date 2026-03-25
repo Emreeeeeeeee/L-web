@@ -4,57 +4,16 @@
 const navbar = document.getElementById('navbar');
 const hero = document.getElementById('hero');
 
-const navObserver = new IntersectionObserver(
-  ([entry]) => {
-    navbar.classList.toggle('scrolled', !entry.isIntersecting);
-  },
-  { threshold: 0.1 }
-);
+if (navbar && hero) {
+  const navObserver = new IntersectionObserver(
+    ([entry]) => {
+      navbar.classList.toggle('scrolled', !entry.isIntersecting);
+    },
+    { threshold: 0.1 }
+  );
 
-navObserver.observe(hero);
-
-// ========================================
-// MOBILE MENU
-// ========================================
-const hamburger = document.getElementById('hamburger');
-const mobileMenu = document.getElementById('mobileMenu');
-
-hamburger.addEventListener('click', () => {
-  hamburger.classList.toggle('active');
-  mobileMenu.classList.toggle('active');
-  document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
-});
-
-document.querySelectorAll('.mobile-link, .mobile-cta').forEach(link => {
-  link.addEventListener('click', () => {
-    hamburger.classList.remove('active');
-    mobileMenu.classList.remove('active');
-    document.body.style.overflow = '';
-  });
-});
-
-// ========================================
-// NAVBAR DROPDOWN TOGGLE (touch support)
-// ========================================
-document.querySelectorAll('.nav-dropdown > .nav-link').forEach(link => {
-  link.addEventListener('click', (e) => {
-    if (window.innerWidth <= 1024 || 'ontouchstart' in window) {
-      e.preventDefault();
-      const parent = link.closest('.nav-dropdown');
-      const isOpen = parent.classList.contains('active');
-      // Close all dropdowns
-      document.querySelectorAll('.nav-dropdown').forEach(d => d.classList.remove('active'));
-      if (!isOpen) parent.classList.add('active');
-    }
-  });
-});
-
-// Close dropdowns on click outside
-document.addEventListener('click', (e) => {
-  if (!e.target.closest('.nav-dropdown')) {
-    document.querySelectorAll('.nav-dropdown').forEach(d => d.classList.remove('active'));
-  }
-});
+  navObserver.observe(hero);
+}
 
 // ========================================
 // SMOOTH SCROLL FOR ANCHOR LINKS
@@ -64,7 +23,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     e.preventDefault();
     const target = document.querySelector(anchor.getAttribute('href'));
     if (target) {
-      const offset = navbar.offsetHeight;
+      const offset = navbar ? navbar.offsetHeight : 0;
       const top = target.getBoundingClientRect().top + window.scrollY - offset;
       window.scrollTo({ top, behavior: 'smooth' });
     }
@@ -300,6 +259,46 @@ if (stickyCta && hero) {
     { threshold: 0 }
   );
   ctaObserver.observe(hero);
+}
+
+// ========================================
+// VIDEO LIGHTBOX
+// ========================================
+const videoTrigger = document.getElementById('videoTrigger');
+const videoLightbox = document.getElementById('videoLightbox');
+const videoFrame = document.getElementById('videoFrame');
+const videoClose = document.getElementById('videoClose');
+const videoEmbedUrl = 'https://www.youtube.com/embed/vJHZK1ejyxw?autoplay=1&rel=0';
+
+function closeVideoLightbox() {
+  if (!videoLightbox || !videoFrame) return;
+  videoLightbox.classList.remove('is-open');
+  videoLightbox.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+  videoFrame.src = '';
+}
+
+if (videoTrigger && videoLightbox && videoFrame) {
+  videoTrigger.addEventListener('click', () => {
+    videoLightbox.classList.add('is-open');
+    videoLightbox.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    videoFrame.src = videoEmbedUrl;
+  });
+
+  if (videoClose) {
+    videoClose.addEventListener('click', closeVideoLightbox);
+  }
+
+  videoLightbox.querySelectorAll('[data-lightbox-close]').forEach((element) => {
+    element.addEventListener('click', closeVideoLightbox);
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && videoLightbox.classList.contains('is-open')) {
+      closeVideoLightbox();
+    }
+  });
 }
 
 // ========================================
