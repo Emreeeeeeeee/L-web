@@ -48,7 +48,7 @@
   z-index: 1000;
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(200, 16, 46, 0.08);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
 }
 
 .landing-header-wrap {
@@ -129,7 +129,7 @@
 .navbar.scrolled {
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(12px);
-  box-shadow: 0 1px 20px rgba(200, 16, 46, 0.08);
+  box-shadow: 0 1px 20px rgba(15, 23, 42, 0.08);
 }
 
 .navbar > .container {
@@ -362,9 +362,9 @@
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 80% 50% at 20% 50%, rgba(255, 152, 0, 0.1) 0%, transparent 50%),
-    radial-gradient(ellipse 60% 60% at 80% 30%, rgba(200, 16, 46, 0.15) 0%, transparent 50%),
-    linear-gradient(160deg, #240a0a 0%, #3d0c0c 25%, #C8102E 50%, #8f1e2d 75%, #2e0a0a 100%);
+    radial-gradient(ellipse 80% 50% at 20% 50%, rgba(200, 16, 46, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse 60% 60% at 80% 30%, rgba(200, 16, 46, 0.08) 0%, transparent 50%),
+    linear-gradient(160deg, #080d1a 0%, #0a1020 25%, #0f172a 50%, #1a2338 75%, #0a1020 100%);
 }
 
 .hero-pattern {
@@ -388,7 +388,7 @@
   height: 500px;
   top: -150px;
   right: -50px;
-  background: radial-gradient(circle, rgba(255, 152, 0, 0.2), transparent 70%);
+  background: radial-gradient(circle, rgba(200, 16, 46, 0.15), transparent 70%);
   animation: meshMove1 14s ease-in-out infinite;
 }
 
@@ -439,7 +439,7 @@
 .badge-dot {
   width: 8px;
   height: 8px;
-  background: var(--accent);
+  background: var(--white);
   border-radius: 50%;
   animation: pulse 2s ease-in-out infinite;
 }
@@ -450,6 +450,11 @@
   line-height: 1.08;
   margin-bottom: var(--space-6);
   letter-spacing: -0.03em;
+}
+
+.hero-accent-text {
+  color: #E01235;
+  font-style: italic;
 }
 
 .hero-subtitle {
@@ -480,7 +485,7 @@
 }
 
 .trust-badge svg {
-  color: var(--accent);
+  color: var(--white);
   flex-shrink: 0;
 }
 
@@ -606,8 +611,8 @@
   font-size: 12px;
   font-weight: 600;
   color: rgba(255, 255, 255, 0.75);
-  background: rgba(255, 152, 0, 0.08);
-  border: 1px solid rgba(255, 152, 0, 0.2);
+  background: rgba(200, 16, 46, 0.06);
+  border: 1px solid rgba(200, 16, 46, 0.15);
   border-radius: var(--radius-full);
 }
 
@@ -927,7 +932,7 @@
 /* Promo Banner - Editorial */
 .promo-banner-editorial {
   margin-top: var(--space-8);
-  background: linear-gradient(135deg, rgba(200, 16, 46, 0.05), rgba(200, 16, 46, 0.08));
+  background: linear-gradient(135deg, rgba(200, 16, 46, 0.04), rgba(200, 16, 46, 0.06));
   border: 1px solid rgba(200, 16, 46, 0.1);
   border-radius: var(--radius-2xl);
   padding: var(--space-8) var(--space-10);
@@ -1156,7 +1161,7 @@
 .product-card-icon {
   width: 48px;
   height: 48px;
-  background: rgba(255, 152, 0, 0.1);
+  background: rgba(200, 16, 46, 0.1);
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -1214,15 +1219,15 @@
 .why-elogo-bg {
   position: absolute;
   inset: 0;
-  background: linear-gradient(160deg, #240a0a 0%, #3d0c0c 25%, #C8102E 50%, #8f1e2d 75%, #2e0a0a 100%);
+  background: linear-gradient(160deg, #080d1a 0%, #0a1020 25%, #0f172a 50%, #1a2338 75%, #0a1020 100%);
 }
 
 .why-elogo-mesh-bg {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 40% 40% at 10% 90%, rgba(255, 152, 0, 0.1) 0%, transparent 50%),
-    radial-gradient(ellipse 50% 50% at 90% 20%, rgba(255, 152, 0, 0.08) 0%, transparent 50%);
+    radial-gradient(ellipse 40% 40% at 10% 90%, rgba(200, 16, 46, 0.1) 0%, transparent 50%),
+    radial-gradient(ellipse 50% 50% at 90% 20%, rgba(200, 16, 46, 0.06) 0%, transparent 50%);
 }
 
 .feature-showcase {
@@ -1296,7 +1301,7 @@
 .award-bg-dots {
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(circle, rgba(200, 16, 46, 0.04) 1px, transparent 1px);
+  background-image: radial-gradient(circle, rgba(15, 23, 42, 0.04) 1px, transparent 1px);
   background-size: 24px 24px;
 }
 
@@ -1314,7 +1319,7 @@
 .award-big-number {
   font-size: var(--fs-display);
   font-weight: 800;
-  background: var(--gradient-text-red);
+  background: black;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -1403,7 +1408,7 @@
 
 .reference-logo-img:hover {
   border-color: var(--accent);
-  box-shadow: 0 4px 16px rgba(255, 152, 0, 0.12);
+  box-shadow: 0 4px 16px rgba(200, 16, 46, 0.12);
   transform: scale(1.05);
 }
 
