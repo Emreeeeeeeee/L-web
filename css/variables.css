@@ -1,13 +1,13 @@
 :root {
-  /* Colors */
-  --primary: #1A237E;
-  --primary-light: #2A338F;
-  --primary-vivid: #3F51B5;
-  --accent: #00BCD4;
+  /* Colors — Logo Yazılım Kurumsal */
+  --primary: #C8102E;
+  --primary-light: #E01235;
+  --primary-vivid: #F10D32;
+  --accent: #FF9800;
   --accent-warm: #FF9800;
-  --red: #C62828;
+  --red: #C8102E;
   --red-light: #E53935;
-  --red-dark: #B71C1C;
+  --red-dark: #7F0404;
   --neutral-900: #1B1B2F;
   --neutral-700: #374151;
   --neutral-600: #6B7280;
@@ -20,20 +20,20 @@
   --error: #EF4444;
 
   /* Gradients */
-  --gradient-primary: linear-gradient(135deg, #1A237E 0%, #2A338F 50%, #1A237E 100%);
-  --gradient-hero: linear-gradient(135deg, #0D1442 0%, #1A237E 40%, #2A338F 100%);
-  --gradient-cta: linear-gradient(135deg, #1A237E 0%, #303F9F 100%);
+  --gradient-primary: linear-gradient(135deg, #C8102E 0%, #E01235 50%, #C8102E 100%);
+  --gradient-hero: linear-gradient(135deg, #3d0c0c 0%, #C8102E 40%, #E01235 100%);
+  --gradient-cta: linear-gradient(135deg, #C8102E 0%, #E01235 100%);
 
   /* Bento card gradients */
-  --gradient-bento-1: linear-gradient(135deg, #1A237E 0%, #3F51B5 100%);
+  --gradient-bento-1: linear-gradient(135deg, #C8102E 0%, #F10D32 100%);
   --gradient-bento-2: linear-gradient(135deg, #00897B 0%, #26A69A 100%);
   --gradient-bento-3: linear-gradient(135deg, #0288D1 0%, #29B6F6 100%);
   --gradient-bento-4: linear-gradient(135deg, #E65100 0%, #FF9800 100%);
 
   /* Gradient text */
-  --gradient-text-accent: linear-gradient(135deg, #4DD0E1, #00BCD4, #26C6DA);
+  --gradient-text-accent: linear-gradient(135deg, #FF9800, #FF5722, #FF9800);
   --gradient-text-red: linear-gradient(135deg, #E53935, #FF5722, #FF9800);
-  --gradient-text-number: linear-gradient(135deg, #3F51B5, #00BCD4);
+  --gradient-text-number: linear-gradient(135deg, #C8102E, #FF9800);
 
   /* Glass */
   --glass-bg: rgba(255, 255, 255, 0.06);
@@ -75,15 +75,15 @@
   --radius-full: 9999px;
 
   /* Shadows */
-  --shadow-sm: 0 1px 3px rgba(26, 35, 126, 0.06);
-  --shadow-md: 0 4px 12px rgba(26, 35, 126, 0.08);
-  --shadow-lg: 0 12px 32px rgba(26, 35, 126, 0.12);
-  --shadow-xl: 0 20px 60px rgba(26, 35, 126, 0.15);
-  --shadow-2xl: 0 32px 80px rgba(26, 35, 126, 0.2);
-  --shadow-card: 0 2px 8px rgba(26, 35, 126, 0.06);
-  --shadow-card-hover: 0 12px 32px rgba(26, 35, 126, 0.14);
-  --shadow-glow-cyan: 0 0 40px rgba(0, 188, 212, 0.3);
-  --shadow-glow-red: 0 0 40px rgba(198, 40, 40, 0.25);
+  --shadow-sm: 0 1px 3px rgba(200, 16, 46, 0.06);
+  --shadow-md: 0 4px 12px rgba(200, 16, 46, 0.08);
+  --shadow-lg: 0 12px 32px rgba(200, 16, 46, 0.12);
+  --shadow-xl: 0 20px 60px rgba(200, 16, 46, 0.15);
+  --shadow-2xl: 0 32px 80px rgba(200, 16, 46, 0.2);
+  --shadow-card: 0 2px 8px rgba(200, 16, 46, 0.06);
+  --shadow-card-hover: 0 12px 32px rgba(200, 16, 46, 0.14);
+  --shadow-glow-accent: 0 0 40px rgba(255, 152, 0, 0.3);
+  --shadow-glow-red: 0 0 40px rgba(200, 16, 46, 0.25);
 
   /* Transitions */
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
